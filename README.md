@@ -6,6 +6,8 @@ In this app you can do the following tasks:
 - Add task
 - Remove task
 - Mark as done or not done
-- Search tasks
+- Search for tasks
+
+  <h1>Here are the snapshots of the Todo App</h1>
 
 
