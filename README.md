@@ -26,11 +26,9 @@ In this app you can do the following tasks:
 <h2>Mark as done or not done</h2>
 
 ![Screenshot 2024-04-12 222132](https://github.com/WednesdaySP/Todo-App/assets/122176467/bac96b11-f6ab-41ac-b373-9d440b407a4c)
-
 ![Screenshot 2024-04-12 222211](https://github.com/WednesdaySP/Todo-App/assets/122176467/f06125b8-520b-4e06-b004-148d3078ca7a)
 
 <h2>Search for tasks</h2>
 
 ![Screenshot 2024-04-12 222421](https://github.com/WednesdaySP/Todo-App/assets/122176467/06856e8c-7354-4255-958d-ee22549871af)
-
 ![Screenshot 2024-04-12 222351](https://github.com/WednesdaySP/Todo-App/assets/122176467/24b7f33c-0005-4ca8-a7cc-66e8c65c59c3)
