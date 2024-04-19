@@ -3,6 +3,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:transition1/Data/database.dart';
 import 'package:transition1/Models/todo.dart';
 import 'package:transition1/Widgets/todo_items.dart';
 
@@ -14,15 +16,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  //reference the hive box
+  // final _myBox=Hive.box('mybox');
+
+  // //instance of dataabase
+  // TodoDatabase db=TodoDatabase();
+
   final todosList =ToDo.todoList();
   List<ToDo> _foundTodo=[];
   final _todoController=TextEditingController();
+
 
   @override
   void initState() {
     // TODO: implement initState
     _foundTodo=todosList;
     super.initState();
+
+     //if this is the first time ever opening the app, then create default data
+    // if(_myBox.get("List")==null){
+    //   db.createInitialData();
+      
+    // }
+    // else{
+    //   //there already exist data
+    //   db.loadData();
+      
+    // }
   }
 
 
@@ -134,18 +155,21 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       todo.isDone=!todo.isDone;
     });
+    // db.updateDatabase();
     
   }
   void _deleteTodoItem(String id){
     setState(() {
       todosList.removeWhere((item) => item.id==id);
     });
+    // db.updateDatabase();
   }
   void _addtodoItem(String todo){
     setState(() {
       todosList.add(ToDo(id: DateTime.now().millisecondsSinceEpoch.toString(), todoText: todo));
       _todoController.clear();
     });
+    // db.updateDatabase();
   }
 
   void _runSearch(String enteredKeyword){
@@ -201,8 +225,8 @@ class _HomePageState extends State<HomePage> {
           scale: 2.5,
           color: Colors.black,),
           Container(
-            height: 40,
-            width: 40,
+            height: 45,
+            width: 45,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(50),
               child: Image.asset('assets/images/profile.png'),

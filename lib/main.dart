@@ -1,9 +1,15 @@
 /// This is a basic Flutter app that displays a counter and increments it when a button is pressed.
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:transition1/Screens/HomePage.dart';
 
-void main() {
+void main()  {
+  //init hive
+  // await Hive.openBox('mybox');
+
+  // //open box
+  // void box=await Hive.openBox('mybox');
   runApp(const MyApp());
 }
 
